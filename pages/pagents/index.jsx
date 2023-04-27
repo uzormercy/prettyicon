@@ -105,7 +105,7 @@ const PagentListingPage =  () => {
             votes: 20
         }
      ]
-    return <div className="w-full bg-slate-100">
+    return <div className="w-full bg-slate-100 py-6">
         <div className="container mx-auto pt-3">
             <div className="flex items-center justify-center">
                 <h2 className="sec-title text-center">Vote your favourite <br/> beauty pagent</h2>

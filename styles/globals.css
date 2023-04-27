@@ -17,6 +17,37 @@
   object-fit: cover;
   width: 100%;
 }
+.pagent-image-2{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.pagent-details-container{
+  background-position: center;
+  width: 100%;
+  /* height: 100vh; */
+  background-size: cover;
+  background-image: url('/images/001.svg');
+  position: relative;
+  /* top: 0;
+  left: 0; */
+}
+.pagent-details-container::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.pagent-detail-content-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 599px){
   .sec-title {
       font-size: 32px;
