@@ -13,8 +13,8 @@ const PaystackModal = () => {
             key: "",
             email,
             amount: amount * 100,
-            onSuccess(transaction)(
-                let message = `Payment Complete Reference $[transaction.reference]`
+            onSuccess(transaction),(
+                let (message) = (`Payment Complete Reference $[transaction.reference]`)
                 alert (message)
             ),
             onClose(),{

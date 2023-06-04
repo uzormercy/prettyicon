@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { PaystackPop } from "paystack/inline-js";
-// import {PaymentModal} from "components/pagents/PaymentModal"
+import {PaymentModal} from "components/pagents/PaymentModal"
 
 const PaystackModal = () => {
     
@@ -27,8 +27,7 @@ const PaystackModal = () => {
 
     return (
         <div>
-        
-
+            <PaymentModal/>
 
         </div>   
     )
