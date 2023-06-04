@@ -5,7 +5,6 @@ import { paystack } from "@/config/env"
 // import "https://js.paystack.co/v1/inline.js"
 
 const PaymentModal = () => {
-  
 
     // const publicKey = paystack.pk
     const secretKey = paystack.sk

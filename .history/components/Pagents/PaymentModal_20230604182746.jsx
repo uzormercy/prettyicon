@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { paystack } from "@/config/env"
-// import {PaymentModal} from "components/PaystackModal"
+import {PaymentModal} from "components/PaystackModal"
 
 // import "https://js.paystack.co/v1/inline.js"
 
 const PaymentModal = () => {
-  
+    <PaymentModal/>
 
     // const publicKey = paystack.pk
     const secretKey = paystack.sk

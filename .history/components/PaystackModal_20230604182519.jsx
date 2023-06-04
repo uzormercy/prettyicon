@@ -11,17 +11,9 @@ const PaystackModal = () => {
         const paystack = new PaystackPop()
         paystack.newTransaction((
             key: "",
-            email,
-            amount: amount * 100,
-            onSuccess(transaction)(
-                let message = `Payment Complete Reference $[transaction.reference]`
-                alert (message)
-            ),
-            onClose(){
-                alert("Transaction was not completed, window closed");
-          
-              },
-        ));
+            email: document.getElementById('email-address').value,
+            amount: document.getElementById('amount').value * 100,
+        ))
     )
 
 

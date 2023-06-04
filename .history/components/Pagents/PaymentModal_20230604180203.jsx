@@ -1,12 +1,10 @@
 import { useState } from "react"
 import { paystack } from "@/config/env"
-// import {PaymentModal} from "components/PaystackModal"
+import {PaymentModal} from "components/PaystackModal"
 
 // import "https://js.paystack.co/v1/inline.js"
 
 const PaymentModal = () => {
-  
-
     // const publicKey = paystack.pk
     const secretKey = paystack.sk
     const amount = 100
@@ -49,7 +47,7 @@ const PaymentModal = () => {
 
                 <form className="my-5">
                     <div className="relative mb-4">
-                        <label value = {email}  onChange = {(e) => setEmail(e.target.value)} className="text-500 mb-2 block">Email Address:</label>
+                        <label className="text-500 mb-2 block">Email Address:</label>
                         <input type="email" placeholder="Enter email address" className="block h-14 w-full border-[1px] rounded-lg focus:ring-0 px-3.5 border-gray-300" />
                     </div>
                     
