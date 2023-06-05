@@ -9,8 +9,9 @@ const PaystackModal = () => {
     const paywithpaystack = (e) => (
         e.preventDefault()
         const paystack = new PaystackPop()
+        
         paystack.newTransaction((
-            key: "",
+            key: "pk_test_5dd036a42eb732ea463d5c6e6eefaf9082f453ae",
             email,
             amount: amount * 100,
             onSuccess(transaction)(
@@ -19,7 +20,6 @@ const PaystackModal = () => {
             ),
             onClose(),{
                 alert("Transaction was not completed, window closed");
-          
               },
         ));
     )
