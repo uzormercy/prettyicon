@@ -2,17 +2,24 @@ import Image from "next/image"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import PaymentModal from "./PaymentModal"
+import { useState } from "react"
 
 
 const PagentDetails = ({image}) => {
-const images = [
-    "/images/01.jpg",
-    "/images/02.jpg",
-    "/images/03.jpg",
-    "/images/04.jpg"
-]
+
+    const [modal, setModal] = useState(false)
+    const toggleModal = () => {
+        setModal(!modal)
+    }
+
+    const images = [
+        "/images/01.jpg",
+        "/images/02.jpg",
+        "/images/03.jpg",
+        "/images/04.jpg"
+    ]
     return <div className="relative">
-        <PaymentModal />
+        {modal && <PaymentModal toggleModal={toggleModal} />}
         <div className="w-screen min-h-screen p-4 pagent-details-container">
             <div className="w-full h-full relative top-0 left-0 z-10">
                 <div className="container mx-auto grid grid-cols-12 gap-5">
@@ -34,7 +41,7 @@ const images = [
                             </div>
                             <div className="py-8 max-md:fixed max-md:bottom-0 max-md:left-0 max-md:px-[12px] max-md:w-full max-md:backdrop-blur-[2px]">
                                 {/* <PaystackButton {...componentProps} /> */}
-                                <button className="h-14 px-28 font-semibold max-md:w-full bg-orange-500 text-white">
+                                <button type="button" onClick={toggleModal} className="h-14 px-28 font-semibold max-md:w-full bg-orange-500 text-white">
                                     Vote
                                 </button>
                             </div>

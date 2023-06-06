@@ -2,9 +2,8 @@ import { useState } from "react"
 import { paystack } from "@/config/env"
 
 
-const PaymentModal = () => {
+const PaymentModal = ({ modal, toggleModal }) => {
     const [email, setEmail] = useState("")
-
 
     const secretKey = paystack.sk
     const amount = 10000
@@ -41,11 +40,11 @@ const PaymentModal = () => {
 
 
     return (
-        <div className="fixed flex z-30 h-screen w-screen p-3.5 backdrop-blur-[4px]">
+        <div className={"fixed z-30 h-screen w-screen p-3.5 backdrop-blur-[4px] flex"}>
             <div className="w-[600px] max-[600px]:w-full bg-white h-fit m-auto rounded-lg p-5">
                 <div className="flex justify-between items-center mb-1">
                     <h5 className="font-[500] text-2xl">Vote Sarah Jakes</h5>
-                    <button className="bg-gray-100 h-8 w-8 rounded-full text-xl inline-flex items-center justify-center">&times;</button>
+                    <button type="button" onClick={toggleModal} className="bg-gray-100 h-8 w-8 rounded-full text-xl inline-flex items-center justify-center">&times;</button>
                 </div>
                 
                 <p className="text-gray-400 text-md">Fill in your email address to vote for Sarah Jakes.</p>
