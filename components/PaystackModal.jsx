@@ -24,7 +24,6 @@ const PaystackModal = () => {
         ));
     )
 
-
     return (
         <div>
         
