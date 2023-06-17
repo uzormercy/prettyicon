@@ -10,19 +10,19 @@
   color: #000;
   font-weight: 700
 }
-.pargent-title{
+.pageant-title{
   color: #ff9000;
 }
-.pagent-image{
+.pageant-image{
   object-fit: cover;
   width: 100%;
 }
-.pagent-image-2{
+.pageant-image-2{
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.pagent-details-container{
+.pageant-details-container{
   background-position: center;
   width: 100%;
   /* height: 100vh; */
@@ -32,7 +32,7 @@
   /* top: 0;
   left: 0; */
 }
-.pagent-details-container::before{
+.pageant-details-container::before{
   content: '';
   position: absolute;
   width: 100%;
@@ -42,7 +42,7 @@
   left: 0px;
   z-index: 1;
 }
-.pagent-detail-content-right{
+.pageant-detail-content-right{
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -54,9 +54,10 @@ const Layout = ({children}) => {
                       />
                     )}
                      </div>
-
                 </div>
-                {children}
+                <div className="p-3">
+                  {children}
+                </div>
             </div>
         </div>
     )

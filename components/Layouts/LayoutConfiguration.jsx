@@ -1,35 +1,38 @@
 import EmptyLayout from "./EmptyLayout";
 import Layout from "./Layout";
-import url from 'url';
 
-const getLayout = (router) => {
-
-  const LayoutConfig = [
+const layoutConfig = [
     {
-      path: "/login",
-      layout: EmptyLayout,
+        config: { path: '/login', title: 'Login' },
+        layout: EmptyLayout
     },
     {
-      path: "/",
-      layout: EmptyLayout,
+        config: { path: '/register', title: 'Register' },
+        layout: EmptyLayout
     },
     {
-      path: "/admin",
-      layout: Layout,
+        config: { path: '/admin', title: 'Dashboard' },
+        layout: Layout
     },
-      {
-      path: "/admin/pageants",
-      layout: Layout,
+    {
+      config: { path: '/admin/pageants', title: 'Pageants' },
+      layout: Layout
+  },
+  {
+    config: { path: '/', title: 'Home' },
+    layout: EmptyLayout,
+  },
+    {
+        config: { path: '' },
+        layout: EmptyLayout
     },
+];
 
-  ];
-
-  const { pathname } = url.parse(process.env.NEXT_PUBLIC_BASE_URL + router.asPath, true);
-  const config = LayoutConfig.find(({ path }) => path === pathname);
-
-  if (config) return config.layout;
-  if (router.query) return Layout;
-  return EmptyLayout;
-
+const GetLayout = (path) => {
+  
+    const config = layoutConfig.find((configItem) => path.includes(configItem.config.path));
+    if(config) return config;
+    return { Layout: EmptyLayout };
 }
-export { getLayout }
+
+export { GetLayout }

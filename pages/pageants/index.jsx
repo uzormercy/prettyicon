@@ -1,6 +1,6 @@
-import PagentListing from "@/components/Pagents/PagentListing"
+import PageantListing from "@/components/Pageants/PageantListing"
 
-const PagentListingPage =  () => {
+const PageantListingPage =  () => {
     const images = [
         {
             id: 1,
@@ -128,9 +128,9 @@ const PagentListingPage =  () => {
                 <h2 className="sec-title text-center">Vote your favourite <br/> beauty pagent</h2>
             </div>
         </div>
-        <PagentListing images={images} />
+        <PageantListing images={images} />
     </div>
 }
 
 
-export default PagentListingPage
+export default PageantListingPage
